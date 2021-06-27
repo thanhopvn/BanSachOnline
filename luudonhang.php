@@ -57,6 +57,7 @@ if ($conn->query($sql2) === TRUE) {
     header('Location: xacnhandonhang.php');
     // destroy the session 
     // session_destroy(); 
+	unset($_SESSION['cart']);
 } else {
     echo "Error: " . $sql2 . "<br>" . $conn->error;
 }
